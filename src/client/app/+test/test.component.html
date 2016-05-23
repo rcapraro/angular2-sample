@@ -1,4 +1,3 @@
-<alert type="info">ng2-bootstrap hello world!</alert>
-<div style="display:inline-block; min-height:290px;">
-    <datepicker [(ngModel)]="date" showWeeks="true"></datepicker>
-</div>
+<ul>
+  <li *ngFor="let people of peopleService.getAll() | async">{{people.name}}</li>
+</ul>

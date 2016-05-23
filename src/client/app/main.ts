@@ -13,7 +13,8 @@ if ('<%= ENV %>' === 'prod') { enableProdMode(); }
  */
 bootstrap(AppComponent, [
   ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, { useValue: '<%= APP_BASE %>' })
+  provide(APP_BASE_HREF, { useValue: '<%= APP_BASE %>' }),
+  provide('API_BASE_URL', { useValue: 'http://swapi.co/api' })
 ]);
 
 // In order to start the Service Worker located at "./worker.js"
