@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
+import {AlertComponent, DATEPICKER_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 
 /**
  * This class represents the lazy loaded AboutComponent.
@@ -9,6 +9,8 @@ import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
   selector: 'sd-test',
   templateUrl: 'test.component.html',
   styleUrls: ['test.component.css'],
-  directives:[AlertComponent]
+  directives:[AlertComponent, DATEPICKER_DIRECTIVES]
 })
-export class TestComponent { }
+export class TestComponent { 
+  date: Date = new Date();
+}
